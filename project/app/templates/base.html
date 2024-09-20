@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+{{name}}
+{{email}}
+{{contact}}
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="https://single-page-portfolio-orpin.vercel.app/">Portfolio</a></li>
+                      <li><a class="dropdown-item" href="https://mirror-selling-website.vercel.app/">Online Mirror Selling</a></li>
+                      <li><a class="dropdown-item" href="https://hospital-appointments.vercel.app/">Doctor Appointment Booking</a></li>
+                      <li><a class="dropdown-item" href="https://react-js-website-swart.vercel.app/">Online Food Store</a></li>
+                      
+                     
+                    </ul>
+                  </li>
+                  
+                </ul>
+                <form class="d-flex">
+                  <h5 style="color: black;margin-right: 10px;">Profile</h5>
+                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 40px; width: 40px; background-color: gray; margin-right: 20px;">
+                    <a href="#"><i style="color: black; font-size: 140%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+    <!-- ============================= Footer ============================== -->
+    <footer>
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content=
+                  "width=device-width, initial-scale=1.0">
+            <title>Stylish Footer</title>
+          
+            <!-- Bootstrap CSS -->
+            <link href=
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+                  rel="stylesheet">
+          
+            <!-- Font Awesome -->
+            <link href=
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+                  rel="stylesheet">
+          
+            <!-- Bootstrap Bundle with Popper -->
+            <script src=
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+            </script>
+          
+            <!-- Custom CSS -->
+            <style>
+                body {
+                    color: white;
+                }
+        
+                .footer {
+                    background-color: #198754;
+                }
+        
+                .footer-content h2 {
+                    color: #fff;
+                }
+        
+                .footer-content h5,
+                .footer-content p,
+                .footer-links a {
+                    color: #fff;
+                }
+        
+                .footer-links a:hover {
+                    text-decoration: underline;
+                }
+        
+                .footer hr {
+                    background-color: #fff;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <footer class="footer p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h2>GeeksforGeeks</h2>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>About Us</h5>
+                            <p>
+                                GeeksforGeeks is a leading platform that provides
+                                computer science resources and coding challenges for
+                                programmers and technology enthusiasts along with
+                                interview and exam preparations for upcoming aspirants.
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Contact Us</h5>
+                            <ul class="list-unstyled">
+                                <li>Email: rlokhande06244@gmail.com</li>
+                                <li>Phone: +91 9685608424</li>
+                                <li>Address: Ashoka Garden Bhopal Madhya Pradesh 462023</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Follow Us</h5>
+                            <ul class="list-inline footer-links">
+                                <li class="list-inline-item">
+                                  <a href="#">
+                                        <i class="fab fa-facebook"></i>
+                                  </a>
+                                  </li>
+                                <li class="list-inline-item">
+                                  <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                  </a>
+                                </li>
+                                <li class="list-inline-item">
+                                  <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                  </a>
+                                </li>
+                                <li class="list-inline-item">
+                                  <a href="#">
+                                        <i class="fab fa-linkedin"></i>
+                                  </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; 2024 Your Website. All rights reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <ul class="list-inline footer-links">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        Terms of Service
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-white">
+                                        Sitemap
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </body>
+        
+        </html>
+        
+    </footer>
+</body>
+</html>

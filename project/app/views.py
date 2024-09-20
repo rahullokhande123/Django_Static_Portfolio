@@ -22,7 +22,7 @@ def userLogin(request):
                     'email':email,
                     'contact':contact
                 }
-                return render(request,'base.html',data)
+                return render(request,'userData.html',data)
             else:
                 msg="Password Not Currect"
                 return render(request,'userLogin.html',{'msg':msg})

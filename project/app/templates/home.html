@@ -2,12 +2,20 @@
 {% load static %}
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+  </style>
+
 <div>
      <div>
          <img src="{% static 'image/Profile.jpg' %}" alt="">
      </div>
      <div>
-         
+         <div id="nameFont" style="font-family: Dancing Script, cursive;">
+             <b>Rahul Lokhande</b>
+         </div>
      </div>
 </div>
 

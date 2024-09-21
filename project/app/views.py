@@ -56,9 +56,9 @@ def registerdata(request):
 
     response=render(request,'userLogin.html')
     response.set_cookie('name',name,max_age=365*24*60*60)
-    response.set_cookie('email',email)
-    response.set_cookie('contact',contact)
-    response.set_cookie('password',password)
+    response.set_cookie('email',email,max_age=365*24*60*60)
+    response.set_cookie('contact',contact,max_age=365*24*60*60)
+    response.set_cookie('password',password,max_age=365*24*60*60)
     return response
 # def userData(request):
 #     return render(request,'userData.html',data)

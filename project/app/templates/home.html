@@ -1,27 +1,183 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Freehand&family=Monsieur+La+Doulaise&display=swap');
   </style>
+<section id="Perent">
+<!-- =========================================== ======= Profile ===== ====================================== -->
+<div style="padding-top: 5%; background-color: bisque; padding-bottom: 20px;" class="container">
+  <div class="row">
+    
+    <div class="col-md-1">
+      
+   </div>
 
-<div>
-     <div>
-         <img src="{% static 'image/Profile.jpg' %}" alt="">
-     </div>
-     <div>
-         <div id="nameFont" style="font-family: Dancing Script, cursive;">
-             <b>Rahul Lokhande</b>
-         </div>
-     </div>
+    <div class="col-md-5">
+       <img id="profileImg" style="box-shadow: 0px 2px 15px black;" src="{% static 'image/Profile.jpg' %}" class="img-fluid" alt="...">
+    </div>
+
+    <div class="col-md-1">
+      
+    </div>
+
+    <div style="margin-top: 20px;" class="col-md-4">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+              <h1 style="color: black;font-size: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-top: 60px;" >Rahul Lokhande</h1>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <h5>Fullstack Web Developer</h5>
+               <cite title="Source Title"></cite>
+            </figcaption>
+
+            <figcaption style="margin-top: 10px;" class="blockquote-footer">
+              Proficient full stack web developer with a strong background   in 
+              HTML, CSS, C++, and React.js I have extensive experience in developing 
+              dynamic and responsive web applications, having successfully 
+              completed Internship and four significant projects that showcase my 
+              ability to integrate these technologies effectively. Details of these 
+              projects can be found on my resume and GitHub account  <cite title="Source Title">Source Title</cite>
+            </figcaption>
+          </figure>
+    </div>
+
+    <div class="col-md-1">
+      
+   </div>
+    
+  </div>
 </div>
 
-<!-- =============================== ======================= ================================= -->
+<!-- =============================== =========== // ============ ================================= -->
 
-<h1 align="center" style="color: black; margin: 10px;">My Projects</h1>
+<div style="margin-top: 5%;" class="container"></div>
+  <div class="row">
+    
+    <div class="col-md-2">
+      
+   </div>
+
+    <div style="margin-top: 20px;margin-top: 40px;" class="col-md-4">
+      <figure class="text-center">
+          <blockquote class="blockquote">
+            <h1 style="color: black;" >INTERENSHIP</h1>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            <h5>Python Web Developer Intern </h5>
+             <cite title="Source Title"></cite>
+          </figcaption>
+
+          <figcaption class="blockquote-footer"></figcaption>
+            <h5 style="color: black;">Cybrom Technology Pvt. Ltd. Bhopal, M.P. <br> Apr 2024 - Jul 2024  </h5>
+             <cite title="Source Title">Apr 2024 - Jul 2024 </cite>
+          </figcaption>
+
+          <figcaption style="margin-top: 10px;" class="blockquote-footer">
+           
+              <cite title="Source Title"><b>Supported the development and maintenance of web applications using Django. <br> 
+              Contributed to writing clean, efficient, and reusable code in 20+ projects. <br> 
+              Assisted in designing and optimizing database schemas. <br>
+              Worked on integrating front-end applications with backend services. <br> 
+              Participated in code reviews to learn best practices and coding standards. <br> 
+              Continuously explored and adopted new technologies and frameworks as project needs        
+              evolved.  <br>                     
+              Attended training sessions and workshops provided by the team.</b></cite>
+          </figcaption>
+        </figure>
+  </div>
+  
+  <div class="col-md-5">
+    <img style="margin-top: 40px;" src="{% static 'image/Intern.png' %}" class="img-fluid" alt="...">
+  </div>
+
+    <div class="col-md-1">
+      
+    </div>
+
+  </div>
+</div>
+
+
+<h1 align="center" style="color: black; margin: 50px;"> My Projects</h1>
+
+<div style="margin-top: 50px;">
+
+  <div class="card-group">
+    <div style="margin: 20px;" class="card">
+      <img src="{% static 'image/P2.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 style="color: black;" class="card-title"> Online Mirror Selling Website</h5>
+        
+        <p style="color: black;" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        
+        <div class="card-body">
+          <a style="font-size: 20px; text-decoration: none;" href="https://mirror-selling-website.vercel.app/" class="card-link">Preview -></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin: 20px;" class="card">
+      <img src="{% static 'image/P3.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+
+        <h5 style="color: black;" class="card-title">Single Page Portfolio </h5>
+        
+        <p style="color: black;" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        
+        <div class="card-body">
+          <a style="font-size: 20px; text-decoration: none;" href="https://single-page-portfolio-orpin.vercel.app/" class="card-link">Preview -></a>
+        </div>
+
+      </div>
+    </div>
+    <div style="margin: 20px;" class="card">
+      <img src="{% static 'image/P1.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        
+        <h5 style="color: black;" class="card-title">Doctor Appointment Booking </h5>
+        
+        <p style="color: black;" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        
+        <div class="card-body">
+          <a style="font-size: 20px; text-decoration: none;" href="https://hospital-appointments.vercel.app/" class="card-link">Preview -></a>
+        </div>
+
+      </div>
+    </div>
+    <div style="margin: 20px;" class="card">
+      <img src="{% static 'image/P4.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        
+        <h5 style="color: black;" class="card-title"> Online Food Store </h5>
+        
+        <p style="color: black;" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        
+        <div class="card-body">
+          <a style="font-size: 20px; text-decoration: none;" href="https://react-js-website-swart.vercel.app/" class="card-link">Preview -></a>
+        </div>
+
+      </div>
+    </div>
+  
+  </div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- <h1 align="center" style="color: black; margin: 10px;">My Projects</h1>
 <div style="width: 60%; height: 50%; margin: auto;" id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,6 +213,6 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> -->
 
 {% endblock  %}

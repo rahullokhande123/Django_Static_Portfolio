@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
@@ -48,8 +48,8 @@
                       </div>
                     </div>
                     
-                    <form action="{% url 'home' %}"  method="post">
-                    {% csrf_token %}
+                    <form action="{% url 'userLogin' %}"  method="post">
+                      {% csrf_token %}
                       <div class="row gy-3 overflow-hidden">
                         <div class="col-12">
                           <div class="form-floating mb-3">
@@ -64,6 +64,8 @@
                           </div>
                         </div>
                         <div class="col-12">
+
+                        {{msg}}
                           
                         </div>
                         <div class="col-12">

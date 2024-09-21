@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="#">Python Fullstack Developer</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -18,6 +19,14 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+
+                  <li class="nav-item"></li>
+                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                  </li>
+
+                  <li class="nav-item"></li>
+                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
                   </li>
                   
                   <li class="nav-item dropdown">
@@ -38,9 +47,41 @@
                 <form class="d-flex">
                   <h5 style="color: black;margin-right: 10px;">Profile</h5>
                   <div align="center" style="border: 1px solid black; border-radius: 50%; height: 40px; width: 40px; background-color: gray; margin-right: 20px;">
-                    <a href="{% url 'userData' %}"><i style="color: black; font-size: 140%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
+                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i style="color: black; font-size: 140%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
                   </div>
-                  
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div style="color: black;" class="modal-body">
+        <div>
+            <img id="imgModal" src="{% static 'image/Profile.jpg' %}" class="img-fluid" alt="..."> <br>
+        <h5>{{name}}</h5> <br>
+        <h6>Email : {{email}}</h6> <br>
+        <h6>Contact : {{contact}}</h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
                 </form>
               </div>
             </div>
@@ -106,19 +147,21 @@
         </head>
         
         <body>
-            <footer class="footer p-5">
+            <footer style="background-color:darkblue;" class="footer p-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <h2>GeeksforGeeks</h2>
+                            <h2>Python Fullstack Developer</h2>
                         </div>
                         <div class="col-md-3">
                             <h5>About Us</h5>
                             <p>
-                                GeeksforGeeks is a leading platform that provides
-                                computer science resources and coding challenges for
-                                programmers and technology enthusiasts along with
-                                interview and exam preparations for upcoming aspirants.
+                                Proficient full stack web developer with a strong background   in 
+                                HTML, CSS, C++, and React.js I have extensive experience in developing 
+                                dynamic and responsive web applications, having successfully 
+                                completed Internship and five significant projects that showcase my 
+                                ability to integrate these technologies effectively. Details of these 
+                                projects can be found on my resume and GitHub account 
                             </p>
                         </div>
                         <div class="col-md-3">
@@ -139,7 +182,7 @@
                                   </li>
                                 <li class="list-inline-item">
                                   <a href="#">
-                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-github"></i>
                                   </a>
                                 </li>
                                 <li class="list-inline-item">

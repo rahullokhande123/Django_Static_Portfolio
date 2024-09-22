@@ -23,13 +23,22 @@
 }
 #homeS a:hover{
     border-bottom: 1px solid black;
-
+    color: blue;
+}
+#homeS2 a:hover{
+    border-bottom: 1px solid black;
+    color: blue;
+}
+#homeS3 a:hover{
+    border-bottom: 1px solid black;
+    color: blue;
 }
 #eduLogo{
     margin: auto;
     border: 2px solid white;
     border-radius: 50%;
 }
+
 
 
 

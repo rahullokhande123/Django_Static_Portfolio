@@ -25,6 +25,11 @@
     border-bottom: 1px solid black;
 
 }
+#eduLogo{
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+}
 
 
 

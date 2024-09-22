@@ -1,6 +1,9 @@
-#profileImg{
+#profileImg .img{
     border: 1px solid black;
     border-radius: 50%;
+
+    box-shadow: 0px 10px 10px rgb(49, 47, 47);
+    background: rgb(from color r g b);
      
 }
 #raj{
@@ -14,9 +17,13 @@
     margin-left: 30%;
 }
 #Perent{
-    
+    background-image: url();
     background-repeat: no-repeat;
     background-size: cover;
+}
+#homeS a:hover{
+    border-bottom: 1px solid black;
+
 }
 
 

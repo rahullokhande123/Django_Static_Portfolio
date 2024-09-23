@@ -62,3 +62,7 @@ def registerdata(request):
     return response
 # def userData(request):
 #     return render(request,'userData.html',data)
+def about(request):
+    return render(request,'about.html')
+def contact(request):
+    return render(request, 'contact.html' )

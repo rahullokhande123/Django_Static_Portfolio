@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav id="navSec" style="padding-left: 50px;" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="navSec" style="padding-left: 60px;" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <img style="width: 80px;height: 80px;" src="{% static 'image/navLogo.png' %}" alt="">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,18 +23,18 @@
                   </li>
 
                   <li class="nav-item"></li>
-                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
                   </li>
 
                   <li class="nav-item"></li>
-                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
                   </li>
                                     
                 </ul>
                 <form class="d-flex">
                   <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: black;margin-right: 10px;text-decoration: none;" href=""><h5>Profile</h5></a>
-                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 40px; width: 40px; background-color: gray; margin-right: 20px;margin-right: 70px;">
-                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i style="color: black; font-size: 140%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
+                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 25px; width: 25px; background-color: gray; margin-right: 20px;margin-right: 20px;">
+                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i style="color: black; font-size: 100%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
                   </div>
 <!-- ================================ Profile Modal =============================== -->
 
@@ -66,7 +66,14 @@
 </div>
 <!-- ==================================================================================================== -->
 
-                </form>
+              </form>
+              
+              <form class="d-flex">
+                  <div style="margin-right: 70px;">
+                    <a href="{% url 'userLogin' %}"><button type="button" class="btn btn-outline-dark">Log Out</button></a>
+                  </div>
+              </form>
+              
               </div>
             </div>
           </nav>
@@ -160,12 +167,12 @@
                             <h5>Follow Us</h5>
                             <ul class="list-inline footer-links">
                                 <li class="list-inline-item">
-                                  <a href="#">
-                                        <i class="fab fa-facebook"></i>
+                                  <a href="rlokhande06244@gmail.com ">
+                                    <i style="font-size:17px" class="fa">&#xf0e0;</i>
                                   </a>
                                   </li>
                                 <li class="list-inline-item">
-                                  <a href="#">
+                                  <a href="github.com/rahullokhande123/ ">
                                         <i class="fab fa-github"></i>
                                   </a>
                                 </li>
@@ -175,7 +182,7 @@
                                   </a>
                                 </li>
                                 <li class="list-inline-item">
-                                  <a href="#">
+                                  <a href="www.linkedin.com/in/rahul-lokhande-">
                                         <i class="fab fa-linkedin"></i>
                                   </a>
                                 </li>

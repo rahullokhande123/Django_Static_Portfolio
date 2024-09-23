@@ -1,3 +1,16 @@
+
+*{
+    scroll-behavior: smooth;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
 #profileImg .img{
     border: 1px solid black;
     border-radius: 50%;
@@ -35,7 +48,12 @@
     border: 2px solid white;
     border-radius: 50%;
 }
-
+/* #navSec{
+    z-index: 10;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0px;   
+} */
 
 
 

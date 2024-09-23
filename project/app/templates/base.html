@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="navSec" style="padding-left: 50px;" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Python Fullstack Developer</a>
+              <img style="width: 80px;height: 80px;" src="{% static 'image/navLogo.png' %}" alt="">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -46,8 +46,8 @@
                   
                 </ul>
                 <form class="d-flex">
-                  <h5 style="color: black;margin-right: 10px;">Profile</h5>
-                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 40px; width: 40px; background-color: gray; margin-right: 20px;">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: black;margin-right: 10px;text-decoration: none;" href=""><h5>Profile</h5></a>
+                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 40px; width: 40px; background-color: gray; margin-right: 20px;margin-right: 70px;">
                     <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i style="color: black; font-size: 140%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
                   </div>
 <!-- ================================ Profile Modal =============================== -->
@@ -60,14 +60,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div style="color: black;" class="modal-body">
-        <div id="proModal">
-          <div id="modalImg" style="background-image: url(https://w0.peakpx.com/wallpaper/659/699/HD-wallpaper-python-amoled-coding-coding-dark-dark-programming-python-sky-universe.jpg);margin-bottom: 50px;">
+        <div>
+          <div id="modalImg" style="background-image: url(https://w0.peakpx.com/wallpaper/659/699/HD-wallpaper-python-amoled-coding-coding-dark-dark-programming-python-sky-universe.jpg);margin-bottom: 10px;">
             <img align="center" style="margin-bottom: 30px;margin-top: 30px;" id="imgModal" src="{% static 'image/Profile.jpg' %}" class="img-fluid" alt="..."> <br>
           </div>
-            
-        <h5 align="center">{{name}}</h5> <br>
-        <h6 align="center">Email : {{email}}</h6> <br>
-        <h6 align="center">Contact : {{contact}}</h6>
+               <h1 align="center">I'm Fullstack Developer</h1>
+               <h5 align="center">{{name}}</h5> <br>
+               <h6 align="center">Email : {{email}}</h6>
+               <h6 align="center">GitHub : https://github.com/rahullokhande123</h6>
+               <h6 align="center">LinkedIn : www.linkedin.com/in/rahul-lokhande- </h6>
+               <h6 align="center">Contact : {{contact}}</h6>
         </div>
       </div>
       <div class="modal-footer">

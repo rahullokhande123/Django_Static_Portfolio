@@ -15,7 +15,9 @@
     height: 200px;
     border-radius: 50%;
 }
-
+#modalImg{
+    background-image: url(https://t4.ftcdn.net/jpg/04/96/44/35/360_F_496443587_rE7ZXJBTL0CZfLtRWYpAAzf0DidaWaQj.jpg);
+}
 #Perent{
     background-image: url();
     background-repeat: no-repeat;

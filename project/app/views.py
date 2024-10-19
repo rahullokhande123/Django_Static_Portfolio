@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.http import HttpResponse,JsonResponse
 
 # Create your views here.
 def index(request):
@@ -26,7 +27,7 @@ def userLogin(request):
                         'contact':contactby,
                         'password':password
                     }
-                    return render(request,'home.html',data)
+                    return render(request,'index.html',data)
                 else:
                     msg="Password Not Currect"
                     return render(request,'userLogin.html',{'msg':msg})
@@ -66,3 +67,17 @@ def about(request):
     return render(request,'about.html')
 def contact(request):
     return render(request, 'contact.html' )
+def logout(request):
+    response=render(request,'userLogin.html')
+    response.delete_cookie('name')
+    response.delete_cookie('email')
+    response.delete_cookie('contact')
+    response.delete_cookie('password')
+    return response
+
+def linkedin(request):
+    return redirect("https://www.linkedin.com/in/rahul-lokhande-/")
+def instagram(request):
+    return redirect("https://www.instagram.com/")
+def github(request):
+    return redirect("https://github.com/rahullokhande123")

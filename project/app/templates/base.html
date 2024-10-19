@@ -70,7 +70,7 @@
               
               <form class="d-flex">
                   <div style="margin-right: 70px;">
-                    <a href="{% url 'userLogin' %}"><button type="button" class="btn btn-outline-dark">Log Out</button></a>
+                    <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-dark">Log Out</button></a>
                   </div>
               </form>
               
@@ -167,22 +167,22 @@
                             <h5>Follow Us</h5>
                             <ul class="list-inline footer-links">
                                 <li class="list-inline-item">
-                                  <a href="rlokhande06244@gmail.com ">
+                                  <a href="#">
                                     <i style="font-size:17px" class="fa">&#xf0e0;</i>
                                   </a>
                                   </li>
                                 <li class="list-inline-item">
-                                  <a href="github.com/rahullokhande123/ ">
+                                  <a href="{% url 'github' %} ">
                                         <i class="fab fa-github"></i>
                                   </a>
                                 </li>
                                 <li class="list-inline-item">
-                                  <a href="#">
+                                  <a href="{% url 'instagram' %}">
                                         <i class="fab fa-instagram"></i>
                                   </a>
                                 </li>
                                 <li class="list-inline-item">
-                                  <a href="www.linkedin.com/in/rahul-lokhande-">
+                                  <a href="{% url 'linkedin' %}">
                                         <i class="fab fa-linkedin"></i>
                                   </a>
                                 </li>

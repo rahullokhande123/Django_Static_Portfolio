@@ -1,225 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <header>
-        <nav id="navSec" style="padding-left: 60px;" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <img style="width: 80px;height: 80px;" src="{% static 'image/navLogo.png' %}" alt="">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul id="homeS" class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li  class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
+  <header>
+    <nav id="navSec" style="padding-left: 60px;" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img style="width: 80px;height: 80px;" src="{% static 'image/navLogo.png' %}" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul id="homeS" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
 
-                  <li class="nav-item"></li>
-                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
-                  </li>
+            <li class="nav-item"></li>
+            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+            </li>
 
-                  <li class="nav-item"></li>
-                    <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
-                  </li>
-                                    
-                </ul>
-                <form class="d-flex">
-                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: black;margin-right: 10px;text-decoration: none;" href=""><h5>Profile</h5></a>
-                  <div align="center" style="border: 1px solid black; border-radius: 50%; height: 25px; width: 25px; background-color: gray; margin-right: 20px;margin-right: 20px;">
-                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i style="color: black; font-size: 100%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
+            <li class="nav-item"></li>
+            <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
+            </li>
+
+          </ul>
+          <form class="d-flex">
+            <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              style="color: black;margin-right: 10px;text-decoration: none;" href="">
+              <h5>Profile</h5>
+            </a>
+            <div align="center"
+              style="border: 1px solid black; border-radius: 50%; height: 25px; width: 25px; background-color: gray; margin-right: 20px;margin-right: 20px;">
+              <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><i
+                  style="color: black; font-size: 100%;margin-top: 20%;" class="fa-solid fa-user"></i></a>
+            </div>
+            <!-- ================================ Profile Modal =============================== -->
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-<!-- ================================ Profile Modal =============================== -->
-
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div style="color: black;" class="modal-body">
-        <div>
-          <div id="modalImg" style="background-image: url(https://w0.peakpx.com/wallpaper/659/699/HD-wallpaper-python-amoled-coding-coding-dark-dark-programming-python-sky-universe.jpg);margin-bottom: 10px;">
-            <img align="center" style="margin-bottom: 30px;margin-top: 30px;" id="imgModal" src="{% static 'image/Profile.jpg' %}" class="img-fluid" alt="..."> <br>
-          </div>
-               <h1 align="center">I'm Fullstack Developer</h1>
-               <h5 align="center">{{name}}</h5> <br>
-               <h6 align="center">Email : {{email}}</h6>
-               <h6 align="center">GitHub : https://github.com/rahullokhande123</h6>
-               <h6 align="center">LinkedIn : www.linkedin.com/in/rahul-lokhande- </h6>
-               <h6 align="center">Contact : {{contact}}</h6>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ==================================================================================================== -->
-
-              </form>
-              
-              <form class="d-flex">
-                  <div style="margin-right: 70px;">
-                    <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-dark">Log Out</button></a>
+                  <div style="color: black;" class="modal-body">
+                    <div>
+                      <div id="modalImg"
+                        style="background-image: url(https://w0.peakpx.com/wallpaper/659/699/HD-wallpaper-python-amoled-coding-coding-dark-dark-programming-python-sky-universe.jpg);margin-bottom: 10px;">
+                        <img align="center" style="margin-bottom: 30px;margin-top: 30px;" id="imgModal"
+                          src="{% static 'image/Profile.jpg' %}" class="img-fluid" alt="..."> <br>
+                      </div>
+                      <h1 align="center">I'm Fullstack Developer</h1>
+                      <h5 align="center">{{name}}</h5> <br>
+                      <h6 align="center">Email : {{email}}</h6>
+                      <h6 align="center">GitHub : https://github.com/rahullokhande123</h6>
+                      <h6 align="center">LinkedIn : www.linkedin.com/in/rahul-lokhande- </h6>
+                      <h6 align="center">Contact : {{contact}}</h6>
+                    </div>
                   </div>
-              </form>
-              
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </nav>
-    </header>
-    {% block content %}
-    {% endblock %}
+            <!-- ==================================================================================================== -->
 
-    <!-- ============================= Footer ============================== -->
-    <footer>
-        <!DOCTYPE html>
-        <html lang="en">
-        
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content=
-                  "width=device-width, initial-scale=1.0">
-            <title>Stylish Footer</title>
-          
-            <!-- Bootstrap CSS -->
-            <link href=
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
-                  rel="stylesheet">
-          
-            <!-- Font Awesome -->
-            <link href=
-        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-                  rel="stylesheet">
-          
-            <!-- Bootstrap Bundle with Popper -->
-            <script src=
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
-            </script>
-          
-            <!-- Custom CSS -->
-            <style>
-                body {
-                    color: white;
-                }
-        
-                .footer {
-                    background-color: #198754;
-                }
-        
-                .footer-content h2 {
-                    color: #fff;
-                }
-        
-                .footer-content h5,
-                .footer-content p,
-                .footer-links a {
-                    color: #fff;
-                }
-        
-                .footer-links a:hover {
-                    text-decoration: underline;
-                }
-        
-                .footer hr {
-                    background-color: #fff;
-                }
-            </style>
-        </head>
-        
-        <body>
-            <footer style="background-color:darkblue;" class="footer p-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h2>Python Fullstack Developer</h2>
-                        </div>
-                        <div class="col-md-3">
-                            <h5>About Us</h5>
-                            <p>
-                                Proficient full stack web developer with a strong background   in 
-                                HTML, CSS, C++, and React.js I have extensive experience in developing 
-                                dynamic and responsive web applications, having successfully 
-                                completed Internship and five significant projects that showcase my 
-                                ability to integrate these technologies effectively. Details of these 
-                                projects can be found on my resume and GitHub account 
-                            </p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5>Contact Us</h5>
-                            <ul class="list-unstyled">
-                                <li>Email: rlokhande06244@gmail.com</li>
-                                <li>Phone: +91 9685608424</li>
-                                <li>Address: Ashoka Garden Bhopal Madhya Pradesh 462023</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h5>Follow Us</h5>
-                            <ul class="list-inline footer-links">
-                                <li class="list-inline-item">
-                                  <a href="#">
-                                    <i style="font-size:17px" class="fa">&#xf0e0;</i>
-                                  </a>
-                                  </li>
-                                <li class="list-inline-item">
-                                  <a href="{% url 'github' %} ">
-                                        <i class="fab fa-github"></i>
-                                  </a>
-                                </li>
-                                <li class="list-inline-item">
-                                  <a href="{% url 'instagram' %}">
-                                        <i class="fab fa-instagram"></i>
-                                  </a>
-                                </li>
-                                <li class="list-inline-item">
-                                  <a href="{% url 'linkedin' %}">
-                                        <i class="fab fa-linkedin"></i>
-                                  </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; 2024 Your Website. All rights reserved.</p>
-                        </div>
-                        <div class="col-md-6 text-end">
-                            <ul class="list-inline footer-links">
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-white">
-                                        Privacy Policy
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-white">
-                                        Terms of Service
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="text-white">
-                                        Sitemap
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </body>
-        
-        </html>
-        
-    </footer>
+          </form>
+
+          <form class="d-flex">
+            <div style="margin-right: 70px;">
+              <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-dark">Log Out</button></a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  {% block content %}
+  {% endblock %}
+
+  <!-- ============================= Footer ============================== -->
+  <footer>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Stylish Footer</title>
+
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Font Awesome -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+      <!-- Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+      </script>
+
+      <!-- Custom CSS -->
+      <style>
+        body {
+          color: white;
+        }
+
+        .footer {
+          background-color: #198754;
+        }
+
+        .footer-content h2 {
+          color: #fff;
+        }
+
+        .footer-content h5,
+        .footer-content p,
+        .footer-links a {
+          color: #fff;
+        }
+
+        .footer-links a:hover {
+          text-decoration: underline;
+        }
+
+        .footer hr {
+          background-color: #fff;
+        }
+      </style>
+    </head>
+
+    <body>
+      <footer style="background-color:darkblue;" class="footer p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h2>Python Fullstack Developer</h2>
+            </div>
+            <div class="col-md-3">
+              <h5>About Us</h5>
+              <p>
+                Proficient full stack web developer with a strong background in
+                HTML, CSS, C++, and React.js I have extensive experience in developing
+                dynamic and responsive web applications, having successfully
+                completed Internship and five significant projects that showcase my
+                ability to integrate these technologies effectively. Details of these
+                projects can be found on my resume and GitHub account
+              </p>
+            </div>
+            <div class="col-md-3">
+              <h5>Contact Us</h5>
+              <ul class="list-unstyled">
+                <li>Email: rlokhande06244@gmail.com</li>
+                <li>Phone: +91 9685608424</li>
+                <li>Address: Ashoka Garden Bhopal Madhya Pradesh 462023</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Follow Us</h5>
+              <ul class="list-inline footer-links">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i style="font-size:17px" class="fa">&#xf0e0;</i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="{% url 'github' %} ">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="{% url 'instagram' %}">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="{% url 'linkedin' %}">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; 2024 Your Website. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-end">
+              <ul class="list-inline footer-links">
+                <li class="list-inline-item">
+                  <a href="#" class="text-white">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-white">
+                    Terms of Service
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="text-white">
+                    Sitemap
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+
+    </html>
+
+  </footer>
 </body>
+
 </html>

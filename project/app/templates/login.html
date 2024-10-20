@@ -44,11 +44,13 @@
                             <span class="ms-2 fs-6">Log in with Google</span>
                           </a>
                         </div>
-                        <p class="text-center mt-4 mb-5">Or sign in with</p>
+                        <p class="text-center mt-4 mb-4">Or sign in with</p>
                       </div>
                     </div>
                     
-                    <form action="{% url 'userLogin' %}"  method="post">
+                    <div align="center" style="color: red;margin-bottom: 20px;">{{msg}}</div>
+
+                    <form action="{% url 'login' %}"  method="post">
                       {% csrf_token %}
                       <div class="row gy-3 overflow-hidden">
                         <div class="col-12">

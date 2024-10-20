@@ -10,8 +10,11 @@
 </head>
 <body>
     
-    <!-- Registration 13 - Bootstrap Brain Component -->
+  
+
 <section class="bg-light py-3 py-md-5">
+  <a href="{% url 'login' %}"><button style="margin-left: 10%;" class="btn btn-outline-dark">LogIn</button></a>
+  <div align="center" style="color: green; margin-bottom: 20px;margin-top: 20px; font-size: 25px;">{{msg1}}</div>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
@@ -23,8 +26,9 @@
                   <img src="{% static 'image/portfolio.jpg' %}" alt="BootstrapBrain Logo" width="175" height="57">
                 </a>
               </div>
-              <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Enter your details to register</h2>
-              <form action="{% url 'registerdata' %}" method="post">
+              <h2 style="font-size: 25px;" class="fs-6 fw-normal text-center text-secondary mb-4">Enter your details here</h2>
+              <div align="center" style="color: red; margin-bottom: 20px;">{{msg}}</div>
+              <form action="{% url 'registration' %}" method="post">
                 {% csrf_token %}
                 <div class="row gy-2 overflow-hidden">
                   <div class="col-12">

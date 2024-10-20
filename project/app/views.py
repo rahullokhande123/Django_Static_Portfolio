@@ -121,7 +121,7 @@ def login(request):
                     'pas':password1
                 }
                 # all_query=Query.objects.filter(email=email1)
-                return render(request,'dashboard.html',{'data':data})
+                return render(request,'index.html',{'data':data})
             else:
                 msg="You Entered Incorrect Password"
                 return render(request,'login.html',{'msg':msg})
@@ -141,17 +141,23 @@ def login(request):
 
 # def userData(request):
 #     return render(request,'userData.html',data)
+
 def about(request):
     return render(request,'about.html')
+
 def contact(request):
     return render(request, 'contact.html' )
+
+# def logout(request):
+#     response=render(request,'userLogin.html')
+#     response.delete_cookie('name')
+#     response.delete_cookie('email')
+#     response.delete_cookie('contact')
+#     response.delete_cookie('password')
+#     return response
+
 def logout(request):
-    response=render(request,'userLogin.html')
-    response.delete_cookie('name')
-    response.delete_cookie('email')
-    response.delete_cookie('contact')
-    response.delete_cookie('password')
-    return response
+    return render(request,'login.html')
 
 def linkedin(request):
     return redirect("https://www.linkedin.com/in/rahul-lokhande-/")

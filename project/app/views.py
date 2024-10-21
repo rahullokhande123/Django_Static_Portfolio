@@ -4,44 +4,42 @@ from django.http import HttpResponse,JsonResponse
 from .models import User
 
 # Create your views here.
-def index(request):
-    return render(request,'index.html')
 
-def login(request):
-    global data
-    if request.method=='POST'  and (len(request.COOKIES)>1):
-        email=request.POST.get('email')
-        password=request.POST.get('password')
-        # print(request.COOKIES)
-        if request.COOKIES:
-            nameby=request.COOKIES['name']
-            emailby=request.COOKIES['email']
-            contactby=request.COOKIES['contact']
-            passwordby=request.COOKIES['password']
+# def login(request):
+#     global data
+#     if request.method=='POST'  and (len(request.COOKIES)>1):
+#         email=request.POST.get('email')
+#         password=request.POST.get('password')
+#         # print(request.COOKIES)
+#         if request.COOKIES:
+#             nameby=request.COOKIES['name']
+#             emailby=request.COOKIES['email']
+#             contactby=request.COOKIES['contact']
+#             passwordby=request.COOKIES['password']
 
-            print(nameby,emailby,contactby,passwordby)
+#             print(nameby,emailby,contactby,passwordby)
 
-            if emailby==email:
-                if passwordby==password:
-                    data={
-                        'name':nameby,
-                        'email':emailby,
-                        'contact':contactby,
-                        'password':password
-                    }
-                    return render(request,'index.html',data)
-                else:
-                    msg="Password Not Currect"
-                    return render(request,'login.html',{'msg':msg})
-            else:
-                msg="Email Not Found"
-                return render(request,'login.html',{'msg':msg})
-        else:
-            msg= "Please register first"
-            return render(request,'login.html',{'msg':msg})
-    else:
-        # msg= "Please register first"
-        return render(request,'login.html')
+#             if emailby==email:
+#                 if passwordby==password:
+#                     data={
+#                         'name':nameby,
+#                         'email':emailby,
+#                         'contact':contactby,
+#                         'password':password
+#                     }
+#                     return render(request,'home.html',data)
+#                 else:
+#                     msg="Password Not Currect"
+#                     return render(request,'login.html',{'msg':msg})
+#             else:
+#                 msg="Email Not Found"
+#                 return render(request,'login.html',{'msg':msg})
+#         else:
+#             msg= "Please register first"
+#             return render(request,'login.html',{'msg':msg})
+#     else:
+#         # msg= "Please register first"
+#         return render(request,'login.html')
         
 
 
@@ -121,7 +119,7 @@ def login(request):
                     'pas':password1
                 }
                 # all_query=Query.objects.filter(email=email1)
-                return render(request,'index.html',{'data':data})
+                return render(request,'home.html',{'data':data})
             else:
                 msg="You Entered Incorrect Password"
                 return render(request,'login.html',{'msg':msg})

@@ -2,6 +2,94 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    height: 100vh;
+    background: darkslategrey;
+    }
+
+    .container {
+    height: 100%;
+    width: 100%;
+    }
+
+    .p {
+    position: absolute;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    }
+
+    @media only screen and (min-width: 500px) {
+    .p {
+        font-size: 3rem;
+    }
+    }
+
+    @media only screen and (min-width: 700px) {
+    .p {
+        font-size: 5rem;
+    }
+    }
+
+    .p1 {
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    color: cyan;
+    }
+
+    .p2 {
+    color: red;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: text-animation 3s ease-in-out forwards alternate infinite;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    }
+
+    .p3 {
+    height: 20%;
+    color: transparent;
+    }
+
+    @keyframes text-animation {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 0% 1%, 0% 100%, 0% 100%);
+    }
+    }
+
+    .cursor {
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(0, -50%);
+    border-right: 2px solid red;
+    animation: cursor-animation 3s ease-in-out forwards alternate infinite;
+    }
+
+    @keyframes cursor-animation {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+    }
+
+</style>
+
 {% block content %}
 
     <section>
@@ -10,7 +98,21 @@
         </div> -->
 
         <div align="center" style="margin: 4%;z-index: -2;" >
-            <h1 style="color: green;margin-bottom: 4%;" >Wellcome To The Portfolio World</h1>
+            <!-- <h1 style="color: green;margin-bottom: 4%;" >Wellcome To The Portfolio World</h1> -->
+
+            <div id="BrushCursor">
+                <div class="container">
+                  <div class="p p1">Merry Christmas</div>
+                  <div class="p p2">Merry Christmas</div>
+                  <div class="p p3">
+                    Merry Christmas
+                    <div class="cursor"></div>
+                  </div>
+                </div>
+              </div>
+
+
+
             <video width="80px" class="w-100" autoplay loop muted>
                 <source  src="{% static 'video/video1.mp4' %}" type="video/mp4" />
                 <h1>Rahul</h1>

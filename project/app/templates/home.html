@@ -37,6 +37,10 @@
   }
 }
 
+#resume_btn{
+  /* box-shadow: 8px 8px 18px 0px rgb(177, 177, 245);
+} */
+
 </style>
 
     <section>
@@ -44,27 +48,33 @@
             <video autoplay loop width="40%" src="{% static 'video/video1.mp4' %}"></video>
         </div> -->
 
-        <div align="center" style="margin: 3%;z-index: -2;" >
+        <div align="center" style="margin: 3%;z-index: -2;border: 2px solid black;" >
             <!-- <h1 style="color: green;margin-bottom: 4%;" >Wellcome To The Portfolio World</h1> -->
 
             <a href="https://codepen.io/uiswarup/full/wvjZgar" target="_blank" >
                 <div class="container" style="margin-bottom: 20px;">
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <b style="font-size: 200%;" class="animate-charcter"> Wellcome To The Portfolio World </b>
+                      <b style="font-size: 200%;margin-top: 20px;" class="animate-charcter"> Wellcome To The Portfolio World </b>
                     </div>
                   </div>
                 </div>
-                  </a>
+            </a>
 
 
 
             <video width="80px" class="w-100" autoplay loop muted>
                 <source  src="{% static 'video/video1.mp4' %}" type="video/mp4" />
-                <h1>Rahul</h1>
+               
             </video>
 
         </div>
+
+        <div id="resume_btn" style="margin-bottom: 3%;" class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-warning" type="button">Build My Resume</button>
+        </div>
+
+        <!-- <h1 style="color: black;">Rahul</h1> -->
 
     </section>
 

@@ -13,5 +13,6 @@ urlpatterns=[
     path('linkedin/', views.linkedin, name="linkedin"),
     path('instagram/', views.instagram, name="instagram"),
     path('github/', views.github, name="github"),
+    # path('email/', views.email, name="email"),
     
 ]

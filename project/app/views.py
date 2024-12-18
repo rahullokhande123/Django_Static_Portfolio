@@ -42,25 +42,6 @@ from .models import User
 #         return render(request,'login.html')
         
 
-
-
-# def registerdata(request):
-#     print(request.method)
-#     print(request.POST)
-
-#     cstoken=request.POST.get('csrfmiddlewaretoken')
-#     name=request.POST.get('name')
-#     email=request.POST.get('email')
-#     contact=request.POST.get('contact')
-#     password=request.POST.get('password')
-
-#     response=render(request,'userLogin.html')
-#     response.set_cookie('name',name,max_age=365*24*60*60)
-#     response.set_cookie('email',email,max_age=365*24*60*60)
-#     response.set_cookie('contact',contact,max_age=365*24*60*60)
-#     response.set_cookie('password',password,max_age=365*24*60*60)
-#     return response
-
 def registration(request):
     if request.method=="POST":
         name=request.POST.get('name')
@@ -119,7 +100,7 @@ def login(request):
                     'pas':password1
                 }
                 # all_query=Query.objects.filter(email=email1)
-                return render(request,'home.html',{'data':data})
+                return render(request,'index.html',{'data':data})
             else:
                 msg="You Entered Incorrect Password"
                 return render(request,'login.html',{'msg':msg})
@@ -128,12 +109,6 @@ def login(request):
             return render(request,'login.html',{'msg':msg})        
     else:
         return render(request,'login.html')
-
-
-
-
-
-
 
 
 
@@ -156,6 +131,9 @@ def contact(request):
 
 def logout(request):
     return render(request,'login.html')
+
+# def email(request):
+#     return redirect("rlokhande06244@gmail.com")
 
 def linkedin(request):
     return redirect("https://www.linkedin.com/in/rahul-lokhande-/")
